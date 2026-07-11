@@ -1,10 +1,16 @@
 on:
   workflow_dispatch:
     inputs:
+      username:
+        description: 'Who to greet'
+        required: true
+        default: 'World'
+        type: string
       environment:
         description: 'Target environment'
         required: true
         type: choice
         options:
           - staging
-          - prod  
+          - production
+
