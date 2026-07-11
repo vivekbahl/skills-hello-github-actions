@@ -12,5 +12,11 @@ on:
         type: choice
         options:
           - staging
+# Add this missing root-level block:
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Running in ${{ github.event.inputs.environment }}"  
           - production
 
